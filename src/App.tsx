@@ -6,6 +6,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { ProfilePage } from "./pages/ProfilePage";
 import { SettingsPage } from "./pages/SettingsPage";
+import { ScopeCreepDemoPage } from "./pages/ScopeCreepDemoPage";
 
 export function App() {
   return (
@@ -22,6 +23,8 @@ export function App() {
           <Route path="/" element={<DashboardPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          {/* Demo only, not linked from the sidebar — see src/demo/BloatedDropdown.tsx */}
+          <Route path="/demo/scope-creep" element={<ScopeCreepDemoPage />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
